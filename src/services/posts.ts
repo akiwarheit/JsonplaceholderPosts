@@ -1,4 +1,4 @@
-import HttpClient from './index';
+import HttpClient, {USE_MOCKS} from './index';
 
 export interface Post {
   id: string;
@@ -727,4 +727,4 @@ const MockPostsService = {
     }),
 };
 
-export default PostsService;
+export default USE_MOCKS ? MockPostsService : PostsService;

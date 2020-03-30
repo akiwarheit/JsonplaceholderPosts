@@ -1,4 +1,4 @@
-import HttpClient from './index';
+import HttpClient, {USE_MOCKS} from './index';
 
 export interface Comment {
   id: string;
@@ -63,4 +63,4 @@ const MockCommentsService = {
     }),
 };
 
-export default CommentsService;
+export default USE_MOCKS ? MockCommentsService : CommentsService;
