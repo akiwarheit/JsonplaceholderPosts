@@ -1,8 +1,14 @@
 import React from 'react';
 
 import {Post} from '../../domain/posts/types';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
-export default function PostListItem({comment}: {comment: Post}) {
-  return <View></View>;
+export default function PostListItem({post}: {post: Post}) {
+  return (
+    <View>
+      <Text>{post.id}</Text>
+      <Text>{post.title}</Text>
+      <Text>{post.body}</Text>
+    </View>
+  );
 }
